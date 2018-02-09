@@ -101,6 +101,10 @@ rm -rf /kafkadata/kafka_1.0.0/zookeeper/version-2
 
 ```/opt/kafka_2.11-1.0.0/bin/kafka-topics.sh --zookeeper localhost:2181  --create --topic test --partitions 32 --replication-factor 2```
 
+- List all topic
+
+```/opt/kafka_2.11-1.0.0/bin/kafka-topics.sh --zookeeper localhost:2181 --list```
+
 - Describe all topic
 
 ```/opt/kafka_2.11-1.0.0/bin/kafka-topics.sh --zookeeper localhost:2181 --describe```
@@ -112,3 +116,6 @@ rm -rf /kafkadata/kafka_1.0.0/zookeeper/version-2
 - Set retention time of topic test to 1 day.
 
 ``` /opt/kafka_2.11-1.0.0/bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name test --add-config retention.ms=864000000```
+
+- Delete topic
+```/opt/kafka_2.11-1.0.0/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test```
