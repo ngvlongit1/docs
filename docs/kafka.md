@@ -15,7 +15,9 @@ mkdir -p /kafkadata/kafka_1.0.0/zookeeper
 
 ### Edit /opt/kafka_2.11-1.0.0/config/server.properties
 ```
+# Broker id
 broker.id=1
+
 delete.topic.enable=true
 auto.leader.rebalance.enable=true
 log.dirs=/kafkadata/kafka_1.0.0/kafka-logs
@@ -50,6 +52,10 @@ syncLimit=2
 server.1=kafka01:2888:3888
 server.2=kafka02:2888:3888
 server.3=kafka03:2888:3888
+```
+> For Kafka Cluster
+```
+echo <broker.id> > /kafkadata/kafka_1.0.0/zookeeper/myid
 ```
 
 ### 3. Start Server
