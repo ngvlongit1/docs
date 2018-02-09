@@ -67,3 +67,31 @@ echo <broker.id> > /kafkadata/kafka_1.0.0/zookeeper/myid
 ```
 /opt/kafka_2.11-1.0.0/bin/kafka-server-start.sh -daemon /opt/kafka_2.11-1.0.0/config/server.properties
 ```
+
+
+# ReInstall kafka
+## 1. Stop Server
+> Stop Kafka
+```
+ps aux | grep -v grep | grep kafkaServer-gc.log | awk '{print $2}' | xargs kill -s TERM
+```
+
+> Stop Zookeeper
+```
+ps aux | grep -v grep | grep zookeeper-gc.log | awk '{print $2}' | xargs kill -s TERM
+```
+## 2. Delete all old data
+```
+rm -rf /kafkadata/kafka_1.0.0/kafka-logs
+rm -rf /kafkadata/kafka_1.0.0/zookeeper/version-2
+``` 
+## 3. Start Server
+
+- Start Zookeeper Server
+```
+/opt/kafka_2.11-1.0.0/bin/zookeeper-server-start.sh -daemon /opt/kafka_2.11-1.0.0/config/zookeeper.properties
+```
+- Start kafka server
+```
+/opt/kafka_2.11-1.0.0/bin/kafka-server-start.sh -daemon /opt/kafka_2.11-1.0.0/config/server.properties
+```
