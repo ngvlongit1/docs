@@ -118,4 +118,5 @@ rm -rf /kafkadata/kafka_1.0.0/zookeeper/version-2
 ``` /opt/kafka_2.11-1.0.0/bin/kafka-configs.sh --zookeeper localhost:2181 --alter --entity-type topics --entity-name test --add-config retention.ms=864000000```
 
 - Delete topic
+
 ```/opt/kafka_2.11-1.0.0/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test```
