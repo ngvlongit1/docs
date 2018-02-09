@@ -36,7 +36,7 @@ transaction.state.log.replication.factor=3
 zookeeper.connect=kafka01:2181,kafka02:2181,kafka03:2181
 ```
 
-### Edit 
+### Edit /opt/kafka_2.11-1.0.0/config/zookeeper.properties
 ```
 dataDir=/kafkadata/kafka_1.0.0/zookeeper
 # the port at which the clients will connect
