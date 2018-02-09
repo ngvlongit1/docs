@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+    mongodb:
+        image: mongo:latest
+        volumes:
+            - /u01/mongodb:/mongodb
+            - ./etc/mongodb:/etc/mongodb
+        command: -f /etc/mongodb/mongod.conf
+        ulimits:
+            nproc: 64000
+            nofile:
+                soft: 65536
+                hard: 65536
+        network_mode: host
+        user: "1000"
+        restart: "always"
