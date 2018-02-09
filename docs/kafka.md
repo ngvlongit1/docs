@@ -80,7 +80,7 @@ ps aux | grep -v grep | grep kafkaServer-gc.log | awk '{print $2}' | xargs kill 
 ```
 ps aux | grep -v grep | grep zookeeper-gc.log | awk '{print $2}' | xargs kill -s TERM
 ```
-## 2. Delete all old data
+## 2. Delete old data
 ```
 rm -rf /kafkadata/kafka_1.0.0/kafka-logs
 rm -rf /kafkadata/kafka_1.0.0/zookeeper/version-2
