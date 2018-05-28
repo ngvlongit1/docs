@@ -121,6 +121,10 @@ rm -rf /kafkadata/kafka_1.0.0/zookeeper/version-2
 
 ```/opt/kafka_2.11-1.0.0/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic test```
 
-- Tail log
+- Tail log Kafka
+
 ```tail -f -n 100 /opt/kafka_2.11-1.0.0/logs/server.log```
+
+- Tail log Zookeeper
+
 ```tail -f -n 100 /opt/kafka_2.11-1.0.0/logs/zookeeper.out```
