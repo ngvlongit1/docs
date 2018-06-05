@@ -2,8 +2,9 @@
 
 ## Environment
 
-export SCALA_VERSION="2.11"
-export KAFKA_VERSION="1.0.0"
+```export SCALA_VERSION="2.11"```
+
+```export KAFKA_VERSION="1.0.0"```
 
 ## 1. Download & Extract Kafka
 ```
