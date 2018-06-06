@@ -12,6 +12,10 @@ Ref: https://www.elastic.co/guide/en/logstash/current/monitoring.html
 
 
 ### Logging
+
+Ref: https://www.elastic.co/guide/en/logstash/current/logging.html
+
+
 ```curl -XGET 'localhost:9600/_node/logging?pretty'```
 
 ```
