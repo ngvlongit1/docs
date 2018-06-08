@@ -67,6 +67,7 @@ echo <broker.id> > /kafkadata/kafka_$KAFKA_VERSION/zookeeper/myid
 ### 3. Start Server
 
 - Disable swap
+
 ```swapoff -a```
 
 - Start Zookeeper Server
